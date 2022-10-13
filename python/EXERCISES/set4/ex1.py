@@ -1,5 +1,5 @@
 '''1. Write a function to take a list as an argument. Find the number that occurs the most number of times.
-    Example : 
+    Example1 : 
         org_list=[1,2,300,4,5,6,7,2,8,9,10,100,11,2,200,10]
         result=func_exec(org_list)
         print(result)
