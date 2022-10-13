@@ -20,5 +20,25 @@ Solution Steps:
 1. Iterate the list and check condition for most repeated element in the list
 2. Remove the duplicates
 3. Add elelments into new list and return
-
 '''
+# This function is define most number of times element
+def check_max(org_list):
+#define new empty list
+  new_list=[]  
+  #iterates original list on by one  
+  for i in org_list:
+    #checking for number not present in new list    
+    if(i not in new_list):
+      #checking fo number than occurs repeatedly      
+      if(org_list.count(i)>1):
+        #ads number to new list
+        new_list.append(i)
+  #finally returns new list        
+  return new_list
+# Execution
+testorg_list=[10,20,30,40,50,60,100,11,12,13]
+#function calling
+result=check_max(org_list=testorg_list)
+#finally print result
+print("Final Result is :: {} ".format(result)) 
+
