@@ -1,9 +1,9 @@
 '''5.Write a function to take a dict and number X arguments. 
-   If the dict key is NOT divisible by number X, then
-   add the key to new dict and finally return the new dict.
-   :param orgDict: Original dictionary passed by the User
-   :param numX: Number X passed by the User. Type is INT.
-   :return: New dictionary with filtered values ONLY.
+    If the dict key is NOT divisible by number X, then
+    add the key to new dict and finally return the new dict.
+    :param orgDict: Original dictionary passed by the User
+    :param numX: Number X passed by the User. Type is INT.
+    :return: New dictionary with filtered values ONLY.
    Example : 
             testDict={1:4,10:20,3:4,4:7,60:11,12:9}
             numX=10
@@ -21,7 +21,12 @@
             numX=1
             result=func_exec(testDict,numX)
             print(result)
-            Expected Output : {}'''
+            Expected Output : {}
+solution steps:
+1. Itertate original dictionary = {1:4,10:20,3:4,4:7,60:11,12:9}
+2. from the dictionary filter  which keys are not divisible by number X
+3. finally return new dictionary
+'''
 
 #This function gives a new dictionary with key-value pair which the keys from original 
 # dictionary is not divisible by value x entered by the user

@@ -20,7 +20,12 @@ def funcDict(orgDict,numX,numY):
             result=func_exec(testDict,numX,numY)
             print(result)
             Expected Output : {6:11,12:9}}
-    '''
+solution steps:
+1. Itertate original dictionary = {1:4,10:2,3:4,4:7,6:11,12:9}
+2. from the dictionary filter product of dict key and dict value 
+   is greater than sum of numX and numY filter those keys and values 
+3. finally return new dictionary
+'''
   # Define an empty new mapper
   newMapper={}
   # Sum of numX & numY

@@ -11,16 +11,21 @@
         testDict={1:4,10:100,3:90,4:40,6:80,12:200}
         result=func_exec(testDict)
         print(result)
-        Expected Output : 12'''
+        Expected Output : 12
+solution steps:
+1. Itertate original dictionary = {1:4,10:100,3:90,4:40,6:80,12:200}
+2. from the dictionary to find which key have maximum 
+3. finally return the inside dictionary maximum value of key only 
+'''
 
 # This function is define maximum value and return the key
 def funDict(orgDict):
     #stores list of values from dictionary 
-    val=orgDict.values()  
+    value=orgDict.values()  
     #items method gives list of tuples from dictionary and key and values iterates Simanatanously
     for _key,_value in orgDict.items():
            #checking for largest value in the dictionary, if condition true it returns the key for that large value
-           if (max(val)==_value):
+           if (max(value)==_value):
               #finally returns the key of large value pair      
               return _key    
 # Execution

@@ -1,5 +1,5 @@
 '''1. Write a function to take a list as an argument. Remove all duplicates from the list. 
-Don't use any built-in. Check using if conditions.
+      Don't use any built-in. Check using if conditions.
     Example : 
         listA=[1,2,3,4,5,6,7,8,9,10,11,12,1,1,2,4,4,5,6,7]
         result=func_exec(listA)
@@ -7,7 +7,11 @@ Don't use any built-in. Check using if conditions.
         Expected Output : [1,2,3,4,5,6,7,8,9,10,11,12]
         :param orgList: Original list passed by the User
         :return: New list with filtered values ONLY
-        '''
+solution steps:
+1. Itertate original list = [1,2,3,4,5,6,7,8,9,10,11,12,1,1,2,4,4,5,6,7]
+2. from the list Remove all duplicates 
+3. finally return new list
+'''
 #This function removes duplicates elements from list
 def funList(orgList):
     #Define an empty new list

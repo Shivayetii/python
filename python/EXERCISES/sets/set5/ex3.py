@@ -12,7 +12,13 @@
         # 20 -> listA[1] == listB[1]
         # 40 -> listA[3] == listB[3]
         # 50 -> listA[4] == listB[4]
-        Expected Output : [20,40,50]'''
+        Expected Output : [20,40,50]
+solution steps:
+1. Itertate  original listA = [100,20,300,40,50,60,100]
+2. Itertate  original listB = [1100,20,1300,40,50,160,1000]
+3. form the both lists filter the common indexes elements 
+4. finally return the new list
+'''
 # function gives comman elements in listA and listB
 def fun_List(orgListA,orgListB):
 # Define Empty List

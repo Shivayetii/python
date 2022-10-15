@@ -6,7 +6,12 @@
         listA=[1,2,300,4,5,6,7,2,8,9,10,100,11,2,200,10,300]
         result=func_exec(listA)
         print(result)
-        Expected Output : [1,300,5,7,8,19,11,200]'''
+        Expected Output : [1,300,5,7,8,19,11,200]
+solution steps:
+1. Itertate original lister = [1,2,300,4,5,6,7,2,8,9,10,100,11,2,200,10]
+2. from the list to filter the even indexes
+3. finally return new list
+'''
 #This function gives new list with even index elements from original list
 def funList(orgList):
   #define new empty list

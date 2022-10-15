@@ -1,4 +1,4 @@
-'''1.Write a function to take a list. Reverse and return the new list.
+'''1. Write a function to take a list. Reverse and return the new list.
      :param orgDict: Original list passed by the User
      :return: Rerverse New list from orgList.
 Example :
@@ -6,6 +6,10 @@ Example :
         result=func_exec(listA)
         print(result)
         Expected Output : [100,60,50,40,30,20,10]
+solution steps:
+1. Itertate  original listA = [10,20,30,40,50,60,100]
+2. by using the reverse method to reversed the orgiginal list elements
+3. finally return the new list
 '''
 # function define the reverse the list
 def fun_List(orgList):

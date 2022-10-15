@@ -1,6 +1,6 @@
 '''4. Write a function to take a list, number X,Y,Z as arguments.
- From the list pick the elements that are <er than (X+Y+Z). 
- Add those elements to new list. Finally return the new list.
+      From the list pick the elements that are <er than (X+Y+Z). 
+      Add those elements to new list. Finally return the new list.
     Example : 
         listA=[1,2,300,4,5,6,7,8,9,100,11,120,200,400]
         numX=10
@@ -22,7 +22,11 @@
         result=func_exec(listA,numX,numY,numZ)
         print(result)
         Expected Output : [1,2,4,5,6,7,8,9,11].
-  '''
+solution steps:
+1. Itertate original list = [1,2,300,4,5,6,7,8,9,100,11,120,200,400]
+2. from the list filter which elements are lesser than sum of numX,numY and numz
+3. finally return new list
+'''
 #Tthis function define From the list pick the elements that are >er than (X+Y+Z)
 def funList(orgList,numX,numY,numZ):
     #define an empty new list

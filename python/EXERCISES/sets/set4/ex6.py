@@ -13,7 +13,14 @@
         listB=[101,2001,130,140,1500,610,1100,4001,190,901]
         result=func_exec(listA,listB)
         print(result)
-        Expected Output : []'''
+        Expected Output : []
+solution steps:
+1. Itertate  original listA = [10,20,30,40,50,60,100]
+2. Itertate original  listB = [10,200,30,40,500,60,100,400,90]
+3. from both lists to match the common elements, filter the odd indexes retun the match list
+4. from match list remove duplicates 
+4. finally return new list
+'''
 # this function define orglistA and orglistB
 def funList(orglistA,orglistB):
     #define an empty list

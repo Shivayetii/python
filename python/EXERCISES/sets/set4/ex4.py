@@ -9,7 +9,12 @@
             numX=10
             result=func_exec(testDict,numX)
             print(result)
-            Expected Output : {10:20,60:11}'''
+            Expected Output : {10:20,60:11}
+solution steps:
+1. Itertate original dictionary = {1:4,10:20,3:4,4:7,60:11,12:9}
+2. from the dictionary filter  which keys are divisible by number X
+3. finally return new dictionary
+'''
 #This function gives a new dictionary with key-value pair which the keys from original dictionary 
 # is divisible by value x entered by the user
 def funDict(orgDict,numX):

@@ -5,7 +5,12 @@
             testDict={1:4,10:20,3:40,4:7,60:11,12:9}
             result=func_exec(testDict)
             print(result)
-            Expected Output : {1:4,4:7,12:9,60:11,10:20,3:40}'''
+            Expected Output : {1:4,4:7,12:9,60:11,10:20,3:40}
+solution steps:
+1. Itertate  original dictionary = {1:4,10:20,3:4,4:7,60:11,12:9}
+2. by using the sorted method to sort the original dictionary values elements
+3. finally return the new dictionary
+  '''
 #This function returns new sorted dictionary by values
 def funDict(orgDictsort):
   #values() method gives list of values
