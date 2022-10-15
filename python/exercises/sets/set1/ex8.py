@@ -1,18 +1,15 @@
-'''Write a function to take a list, number X as arguments. 
-   From the list pick the elements that are not divisible by number X.
-   Add those elements to new list. Finally return the new list.
-'''
-# this function will defined which elements inside that are not divisible by number X.
-def funList(orgList,numX):
-  # define empty list
-  newList = []
-  # iterate original list
-  for i in orgList:
-    # this is checking the condition for the inside that are not divisible by number X.
-    if(i%numX!=0):
-      # to add the new elements to the list
-      newList.append(i)
-  # finally return the new list
-  return newList
+'''From the list pick the elements that are not EVEN. Add those elements to new list. 
+   Finally print the new list'''
+
+# to create original list and store 10 elements to the list
+orgList = [1,2,3,4,5,6,7,8,9,10]
+# define empty lisr
+newList = []
+# iterate new original list
+for i in orgList:
+    # to check the if condition which elements are not  even inside the list
+    if(i % 2!=0):
+        # add elements to the list
+        newList.append(i)
 # finally print the new list
-print(funList([1,3,5,7,9,10],3))
+print(newList)
