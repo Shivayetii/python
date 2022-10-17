@@ -48,10 +48,3 @@ testListA=[1,2,30,4,2]
 result=funList(org_list=testListA)
 #finally print result
 print("Final Result is :: {} ".format(result))
-
-# Examole2
-testListA=[1,2,3,4,2]
-#function calling
-result=funList(org_list=testListA)
-#finally print result
-print("Final Result is :: {} ".format(result))
