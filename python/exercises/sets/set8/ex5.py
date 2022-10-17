@@ -47,4 +47,8 @@ def funDict(org_dict):
 testDict={10:20, 3:30, 4:16,90:100,20:31,11:23,17:44,20:400}
 result=funDict(org_dict=testDict)
 print("Final Result is :: {} ".format(result))
-
+# Execution
+#Example2
+testDict={10:20, 3:30, 4:16,90:10,20:31,11:23,17:44,20:40}
+result=funDict(org_dict=testDict)
+print("Final Result is :: {} ".format(result))

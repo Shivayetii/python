@@ -46,7 +46,7 @@ result=funList(org_list=testListA)
 #finally print result
 print("Final Result is :: {} ".format(result))
 # Example2
-testListA=[100,20,300,40,50,60,100]
+testListA=[100,20,300,40,1000,50,60,100]
 #function calling
 result=funList(org_list=testListA)
 #finally print result

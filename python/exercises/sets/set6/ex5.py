@@ -1,11 +1,17 @@
 '''5. Write a function to take a dict and number X as argument. 
       Find the key,value pairs that are both divisible by number X
-    Example : 
+    Example1 : 
             testDict={10:20, 3:30, 4:40,90:100,20:30}
             numX=10
             result=func_exec(testDict,numX)
             print(result)
             Expected Output : {10:20,90:100,20:30}
+    Example2 : 
+            testDict={10:20, 3:30, 4:40,90:100,20:30}
+            numX=20
+            result=func_exec(testDict,numX)
+            print(result)
+            Expected Output : {}
     :param orgDict: Original dictionary passed by the User
     :param numX: Number X passed by the User. Type is INT.
     :return: Find the key,value pairs that are both divisible by number X and return new dictionary.
@@ -31,5 +37,10 @@ def funDict(orgDict,numX):
 # Execution
 testDict={10:20, 3:30, 4:40,90:100,20:30}
 numX=10
+result=funDict(orgDict=testDict,numX=numX)
+print("Final Result is :: {} ".format(result))
+# Example2:
+testDict={10:20, 3:30, 4:40,90:100,20:30}
+numX=20
 result=funDict(orgDict=testDict,numX=numX)
 print("Final Result is :: {} ".format(result))

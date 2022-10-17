@@ -34,29 +34,6 @@ Solution Steps:
 3. To check the condition filter values are divisilble 
 4. Return the list  
 '''
-# this function define for which indexes are same in both lists and it must divisible by numx
-def funList(orgListA,orgListB,numX):
-    # define empty list
-    new_List = []
-    # this will condition is will demonstrate both lists are equal
-    orgListA = orgListB
-    #  Iterate the original lists and filter the values
-    for i,j in zip(orgListA,orgListB):
-        # it will print the iteration elemants of the both lists
-        print(i,j)
-        # checking the condition the list elements are divisible or not if condition is truei
-        # it will  executes if statment
-        if (i%numX!=0):
-            # new elements add to the newlist
-            new_List.append(i)
-    # finally return new list
-    return new_List
-# Execution
-testListA=[100,20,300,40,50,60,100]
-testListB=[1100,20,1300,40,50,160,1000]
-numX=10
-result=funList(orgListA=testListA,orgListB=testListB,numX=numX)
-print("Final Result is :: {} ".format(result))
 
 # this function define for which indexes are same in both lists and it must divisible by numx
 def funList(orgListA,orgListB,numX):
@@ -77,28 +54,20 @@ def funList(orgListA,orgListB,numX):
     return new_List
 # Execution
 testListA=[100,20,300,40,50,60,100]
+testListB=[1100,20,1300,40,50,160,1000]
+numX=10
+result=funList(orgListA=testListA,orgListB=testListB,numX=numX)
+print("Final Result is :: {} ".format(result))
+
+# Example2:
+# Execution
+testListA=[100,20,300,40,50,60,100]
 testListB=[100,20,300,40,50,60,100]
 numX=20
 result=funList(orgListA=testListA,orgListB=testListB,numX=numX)
 print("Final Result is :: {} ".format(result))
 
-# this function define for which indexes are same in both lists and it must divisible by numx
-def funList(orgListA,orgListB,numX):
-    # define empty list
-    new_List = []
-    # this will condition is will demonstrate both lists are equal
-    orgListA = orgListB
-    #  Iterate the original lists and filter the values
-    for i,j in zip(orgListA,orgListB):
-        # it will print the iteration elemants of the both lists
-        print(i,j)
-        # checking the condition the list elements are divisible or not if condition is truei
-        # it will  executes if statment
-        if (i%numX==0):
-            # new elements add to the newlist
-            new_List.append(i)
-    # finally return new list   
-    return new_List
+# Example3:
 # Execution
 testListA=[100,21,300,41,50,63,100]
 testListB=[100,21,300,41,50,63,100]

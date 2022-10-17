@@ -75,3 +75,7 @@ print("Final Result is :: {} ".format(result))
 testList=["hello","world","today"]
 result=funList(org_list=testList)
 print("Final Result is :: {} ".format(result))
+
+
+
+    
