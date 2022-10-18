@@ -47,3 +47,85 @@ testorg_list=[10,20,30,40,50,60,100,11,12,13]
 result=funList(org_list=testorg_list)
 #finally print result
 print("Final Result is :: {} ".format(result)) 
+
+#calling function
+#Testcase 1
+result=funList([10,20,30,40,50,60,100,11,12,13])
+print("\n")
+print('Testcase 1 Output : {}'.format(result))
+print("\n")
+print("-"*50)
+print("\n")
+# ------------------------------------------------------------------#
+#Testcase 2
+result=funList([10,21,30,41,50,500,100,11,12,13,21])
+print("\n")
+print('Testcase 2 Output : {}'.format(result))
+print("\n")
+print("-"*50)
+print("\n")
+# ------------------------------------------------------------------#
+#Testcase 3
+result=funList([10,21,30,41,50,50,100,11,12,13,21])
+print("\n")
+print('Testcase 3 Output : {}'.format(result))
+print("\n")
+print("-"*50)
+print("\n")
+# ------------------------------------------------------------------#
+#Testcase 4
+result=funList([10,20,30,40,50,60,100,11,12,13,13,14,13])
+print("\n")
+print('Testcase 4 Output : {}'.format(result))
+print("\n")
+print("-"*50)
+print("\n")
+# ------------------------------------------------------------------#
+#Testcase 5
+result=funList([10,20,30,40,50,60,100,11,12,13,50,14,50])
+print("\n")
+print('Testcase 5 Output : {}'.format(result))
+print("\n")
+print("-"*50)
+print("\n")
+# ------------------------------------------------------------------#
+#Testcase 6
+result=funList([10,20,30,40,50,60,100,11,12,13,111,122,100,101,100])
+print("\n")
+print('Testcase 7 Output : {}'.format(result))
+print("\n")
+print("-"*50)
+print("\n")
+# ------------------------------------------------------------------#
+#Testcase 7
+result=funList([10,20,30,40,50,60,100,11,12,13,40,30,40,1,40])
+print("\n")
+print('Testcase 7 Output : {}'.format(result))
+print("\n")
+print("-"*50)
+print("\n")
+# ------------------------------------------------------------------#
+#Testcase 8
+result=funList([10,20,30,40,50,60,100,11,12,13,20,1,20])
+print("\n")
+print('Testcase 8 Output : {}'.format(result))
+print("\n")
+print("-"*50)
+print("\n")
+# ------------------------------------------------------------------#
+#Testcase 9
+result=funList([10,20,30,40,50,60,100,11,12,13,30,3,30])
+print("\n")
+print('Testcase 9 Output : {}'.format(result))
+print("\n")
+print("-"*50)
+print("\n")
+# ------------------------------------------------------------------#
+#Testcase 10
+result=funList([10,20,30,40,50,60,100,11,12,13,10,10])
+print("\n")
+print('Testcase 10 Output : {}'.format(result))
+print("\n")
+print("-"*50)
+print("\n")
+# ------------------------------------------------------------------#
