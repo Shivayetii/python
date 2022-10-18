@@ -62,39 +62,93 @@
 #define function
 def funList(orglistA,orglistB,orglistC,numX,numY):
     #define new list
-    new_list=[]
+    new_List=[]
     #iterate three lists simantanously
     for i,j,k in zip(orglistA,orglistB,orglistC):
         #checking condition for sum of same indexes numbers in three lists is greater than sum of number x and number y
         if((i+j+k)>(numX+numY)):
             #adding numbers as list into new list
-            new_list.append([i,j,k])
+            new_List.append([i,j,k])
     #fiinally return new list        
-    return new_list    
-#calling function 
-# Execution
-# Example1
-testListA=[10,20,30,40,50]
-testListB=[1,2,3,4,5]
-testListC=[100,150,200,250,300]
-numX=150
-numY=100
-result=funList(orglistA=testListA,orglistB=testListB,orglistC=testListC,numX=numX,numY=numY)
-print("Final Result is :: {} ".format(result))
-# Example2
-testList= [10,20,30,40,50]
-testListB= [1,2,3,4,5]
-testListC= [100,150,200,250,300]
-numX=50
-numY=100
-result=funList(orglistA=testListA,orglistB=testListB,orglistC=testListC,numX=numX,numY=numY)
-print("Final Result is :: {} ".format(result))
-
-# Example3
-testList= [10,20,30,40,50]
-testListB= [1,2,3,4,5]
-testListC= [100,150,200,250,300]
-numX=500
-numY=100
-result=funList(orglistA=testListA,orglistB=testListB,orglistC=testListC,numX=numX,numY=numY)
-print("Final Result is :: {} ".format(result))
+    return new_List    
+#calling function
+#Testcase 1
+result=funList([10,20,30,40,50],[1,2,3,4,5],[100,150,200,250,300],150,100)
+print("\n")
+print('Testcase 1 Output : {}'.format(result))
+print("\n")
+print("-"*50)
+print("\n")
+# ------------------------------------------------------------------#
+#Testcase 2
+result=funList([10,20,30,40,50],[1,2,3,4,5],[100,150,200,250,300],50,100)
+print("\n")
+print('Testcase 2 Output : {}'.format(result))
+print("\n")
+print("-"*50)
+print("\n")
+# ------------------------------------------------------------------#
+#Testcase 3
+result=funList([10,20,30,40,50],[1,2,3,4,5],[100,150,200,250,300],500,100)
+print("\n")
+print('Testcase 3 Output : {}'.format(result))
+print("\n")
+print("-"*50)
+print("\n")
+# ---------------------------------------------------------------------#
+#Testcase 4
+result=funList([10,20,30,40,50],[1,2,3,4,5],[100,150,200,250,300],5,10)
+print("\n")
+print('Testcase 4 Output : {}'.format(result))
+print("\n")
+print("-"*50)
+print("\n")
+# ---------------------------------------------------------------------#
+#Testcase 5
+result=funList([10,20,30,40,50,100,200],[1,2,3,4,5],[100,150,200,250,300],20,30)
+print("\n")
+print('Testcase 5 Output : {}'.format(result))
+print("\n")
+print("-"*50)
+print("\n")
+# ---------------------------------------------------------------------#
+#Testcase 6
+result=funList([10,20,30,40,50],[1,2,3,4,5,6,7,7],[100,150,200,250,300],50,10)
+print("\n")
+print('Testcase 6 Output : {}'.format(result))
+print("\n")
+print("-"*50)
+print("\n")
+# ---------------------------------------------------------------------#
+#Testcase 7
+result=funList([10,20,30,40,50],[1,2,3,4,5],[100,150,200,250,300,350,450],200,100)
+print("\n")
+print('Testcase 7 Output : {}'.format(result))
+print("\n")
+print("-"*50)
+print("\n")
+# ---------------------------------------------------------------------#
+#Testcase 8
+result=funList([10,20,30,40,50,100,200],[1,2,3,4,5],[100,150,200,250,300],300,200)
+print("\n")
+print('Testcase 8 Output : {}'.format(result))
+print("\n")
+print("-"*50)
+print("\n")
+# ---------------------------------------------------------------------#
+#Testcase 9
+result=funList([10,20,30,40,50,150,250],[1,2,3,4,5],[100,150,200,250,300],40,30)
+print("\n")
+print('Testcase 9 Output : {}'.format(result))
+print("\n")
+print("-"*50)
+print("\n")
+# ---------------------------------------------------------------------#
+#Testcase 10
+result=funList([10,20,30,40,50],[1,2,3,4,5,6,7,8,9,10],[100,150,200,250,300],7,8)
+print("\n")
+print('Testcase 10 Output : {}'.format(result))
+print("\n")
+print("-"*50)
+print("\n")
+# ---------------------------------------------------------------------#
