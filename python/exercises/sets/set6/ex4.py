@@ -52,21 +52,7 @@ def funList(orgListA,orgListB,numX):
             new_List.append(i)
     # finally return new list      
     return new_List
-# Execution
-testListA=[100,20,300,40,50,60,100]
-testListB=[1100,20,1300,40,50,160,1000]
-numX=10
-result=funList(orgListA=testListA,orgListB=testListB,numX=numX)
-print("Final Result is :: {} ".format(result))
 
-# Example2:
-# Execution
-testListA=[100,20,300,40,50,60,100]
-testListB=[100,20,300,40,50,60,100]
-numX=20
-result=funList(orgListA=testListA,orgListB=testListB,numX=numX)
-print("Final Result is :: {} ".format(result))
-#calling function
 #Testcase 1
 result=funList([100,20,300,40,50,60,100],[1100,20,1300,40,50,160,1000],10)
 print("\n")

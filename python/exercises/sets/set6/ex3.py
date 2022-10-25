@@ -25,7 +25,7 @@ Iiterate the original list
                 continue the LOOP  
 Finally return the new list             
 '''
-# This function is define pick greater number sum of all the list       
+# This function is define pick greater number product of all the list       
 def funList(org_list):
     # iterate the orginal list
     for i in org_list:
