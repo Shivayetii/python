@@ -21,7 +21,6 @@
 '''
 #This Function gives the most repeated elements from the list
 def check_rep(org_list):
-    
     #define an empty dictionary
     new_mapping={}
     #iterares original list
