@@ -39,26 +39,21 @@
     else:
         retuen empty list []                
 '''
+# Define function
+def funList(org_list):
+	# Maximun length is start from 0 
+    max_len=0
+	# Iterate the original list
+    for i in org_list:
+		# Check condition for length of the list is greater than 0
+        if (len(i)>max_len):
+			# max length of element from the list
+            max_len=len(i)
+			# result is Assign to variable 
+            gre_len=i
+	# Finally retyrn the greatest length word from list			
+    return gre_len        
 
-#define function 
-def funList(org_List):
-    #define new list 
-    new_List=[]
-    #define list to store lengths of elements in orginal list
-    len_List=[]
-    #iterate original list
-    for i in org_List:
-        #adding lengths   to lengths list
-        len_List.append(len(i))
-    #iterate orginal list
-    for j in org_List:
-        if(len(j)==max(len_List)):
-            new_List.append(j)    
-    #checking for is element in new list one ,if new list contains more than one returns empty list
-    if(len(new_List)==1):
-        return new_List
-    else:
-        return [] 
 # Execution
 #calling function
 #Testcase 1
