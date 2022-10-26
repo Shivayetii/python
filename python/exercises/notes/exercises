@@ -571,3 +571,270 @@ Exercise Set 8:
 Note : For each program you need to have a separate python file. Maintain a copy both at your linux as well as windows machine.
 --------------------------------------------------------------------------------------------------------------------------------
 Foot
+
+
+Exercise Set 9:
+---------------
+
+1. Write a function to take a number numX followed by any number of integer arguments. 
+	You need to find all numbers divisible by numX 
+	Filter all the numbers from the list that are divisible numX and add to new list.
+	Finally return the new list.
+
+	Note: You must use *args in your function implementation
+	*********************************************************
+
+	Example :
+		numX=20
+		result=func_exec(numX,20,40,50,60,80,90,100,70)
+		print(result)
+		Expected Output : [20,40,60,80,100]
+
+	Example :
+		numX=25
+		result=func_exec(numX,50,60,80,90,100,70)
+		print(result)
+		Expected Output : [50,100]
+
+	Example :
+		numX=7
+		result=func_exec(numX,20,40,50,70)
+		print(result)
+		Expected Output : [70]
+
+
+2. Write a function to take a number numX, numY followed by any number of integer arguments. 
+	You need to find all numbers divisible by numX and numY
+	Filter all the numbers from the list that are divisible numX and numY and add to new list.
+	Finally return the new list.
+
+	Note: You must use *args in your function implementation
+	*********************************************************
+
+	Example :
+		numX=20
+		numY=10
+		result=func_exec(numX,20,40,50,60,80,90,100,70)
+		print(result)
+		Expected Output : [20,40,60,80,100]
+
+	Example :
+		numX=25
+		numY=5		
+		result=func_exec(numX,50,60,80,90,100,70)
+		print(result)
+		Expected Output : [50,100]
+
+	Example :
+		numX=7
+		numY=12		
+		result=func_exec(numX,20,40,50,70)
+		print(result)
+		Expected Output : []
+-----------------------------------------------------------------------------------------------------
+
+Exercise Set 10:
+----------------
+
+1. Write a function to take 2 lists and an integer numX. 
+   Use zip function to iterate the list.
+   Pick values if 
+   		:they are common at both indexes AND 
+   		:they ARE be divisible by numX. 
+   
+   Duration for Dev & Execution: 10 minutes
+   -----------------------------------------
+
+   *** Note: You must iterate the lists only if the lengths of the lists are equal. *** 
+   -------------------------------------------------------------------------------------
+
+	Example :
+		listA=[100,20,300,40,50,60,100]
+		listB=[1100,20,1300,40,50,160,1000]
+		numX=10
+		result=func_exec(listA,listB)
+		print(result)
+		Expected Output : []
+
+	Example :
+		listA=[100,20,300,40,50,60,100]
+		listB=[100,20,300,40,50,60,100]
+		numX=20
+		result=func_exec(listA,listB)
+		print(result)
+		Expected Output : [100,20,300,40,50,60,100]
+
+	Example :
+		listA=[100,21,300,41,50,63,100]
+		listB=[100,21,300,41,50,63,100]
+		numX=10
+		result=func_exec(listA,listB)
+		print(result)
+		Expected Output : [100,300,50,100]
+
+
+2. Write a function to take a dict, number X,Y as arguments. 
+	If the SUM of (dict key + dict val) is PRIME and > sum of number (X+Y)
+		: then add it to new dict. 
+	Finally iterate and return the new dict.
+
+	Example : 
+			testDict={1:4,10:2,3:4,4:7,6:11,12:9}
+			numX=2
+			numY=10
+
+			result=func_exec(testDict,numX,numY)
+			print(result)
+			Expected Output : {6:11}}
+
+	Example : 
+			testDict={1:4,10:2,3:4,4:7,6:11,12:9}
+			numX=2
+			numY=4
+
+			result=func_exec(testDict,numX,numY)
+			print(result)
+			Expected Output : {3:4,6:11}}
+
+3. Write a function to take a list argument. Find the element that has greatest length.
+
+	Example :
+		listA=["hello","world","science","maths","Python"]
+		result=func_exec(listA)
+		print(result)
+		Expected Output : ["science"]
+		Reason: length of science -> 7
+
+	Example :
+		listA=["hello","world","science","maths","Pythonics"]
+		result=func_exec(listA)
+		print(result)
+		Expected Output : ["Pythonics"]
+		Reason: length of Pythonics -> 9
+
+4. Write a function to take 2 lists and an integer X. 
+	From the listA find all elements that are >er numX. Append those elements to listB.
+	Remove all duplicates from listB.
+	Finally return listB.
+   -------------------------------------------------------------------------------------
+
+	Example :
+		listA=[100,20,300,40,50,60,100]
+		listB=[1100,20,1300,40,50,160,1000]
+		numX=100
+		result=func_exec(listA,listB)
+		print(result)
+		Expected Output : [1100,20,1300,40,50,160,1000,300]
+
+	Example :
+		listA=[100,20,300,40,50,60,100,200]
+		listB=[1100,20,1300,40,50,160,1000]
+		numX=150
+		result=func_exec(listA,listB)
+		print(result)
+		Expected Output : [1100,20,1300,40,50,160,1000,200,300]
+
+
+	Example :
+		listA=[100,20,300,40,50,60,100,200]
+		listB=[1100,20,1300,40,50,160,250]
+		numX=250
+		result=func_exec(listA,listB)
+		print(result)
+		Expected Output : [1100,20,1300,40,50,160,250]
+
+5. Write a function to take a dict as an argument. 
+	Find the key that has least value and return the key.
+
+	Example : 
+		testDict={1:4,10:100,3:90,4:40,6:80,12:200}
+		result=func_exec(testDict)
+		print(result)
+		Expected Output : 1
+		Reason: Output is 1 since 1 has value of 4 which is lesser than other values
+
+
+	Example : 
+		testDict={1:4,10:100,3:90,4:40,6:80,12:200,1000:3}
+		result=func_exec(testDict)
+		print(result)
+		Expected Output : 1
+		Reason: Output is 1000 since 1000 has value of 3 which is lesser than other values
+
+6. Write a function to take a dict as argument. 
+	If the dict-val is the divisible bydict-key then filter, add to new dict.
+   Finally return the new dict.
+
+	Example : 
+			testDict={10:20, 3:30, 4:16,90:100,20:30,11:23,17:44,20:400}
+			result=func_exec(testDict)
+			print(result)
+			Expected Output : {10:20,3:30,4:16,20:400}
+			Reason: 
+				20 is divisible by 10
+				30 is divisible by 3
+				16 is divisible by 4
+				400 is divisible by 20
+-----------------------------------------------------------------------------------------------------
+
+Exercise Set 11:
+----------------
+
+For each of the sections below, write your own function and demonstrate.
+In your tests folder, create seperate python files and execute.
+You must write code, execute and practice each topic in-depth.
+Monday you will have online coding round.
+
+Lists
+*****
+	-	indexing
+	-	slicing
+	-	searching
+	-	sorting
+	-	append
+	-	insert
+	-	remove
+	-	extend
+	-	iteration
+	-	deletion (Deleting the entire list)
+
+Dicts
+*****
+	-	hashing
+	-	searching
+	-	sorting by keys
+	-	sorting by values
+	-	update values
+	-	Add new keys
+	-	Add new keys using dict.update({})
+	-	iteration 
+		- (Iterate and print key:values)
+
+Loops
+*****
+	-	For Loops
+	-	While Loop
+
+Conditions
+**********
+	-	If
+	-	If-else
+	-	If-elif-else
+
+Functions
+**********
+    -  With Args
+    -  Without Args
+    -  *args
+    -  **kwargs
+    -  Default Args
+
+Objects
+********
+    - Mutables
+    - Im-Mutables	
+-----------------------------------------------------------------------------------------------------
+
+-----------------------------------------------------------------------------------------------------
+Note : For each program you need to have a separate python file. Maintain a copy both at your linux as well as windows machine.
+-----------------------------------------------------------------------------------------------------
