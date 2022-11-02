@@ -18,3 +18,25 @@
         150-200       E
         <150        F
 '''
+def check_grade(**sub_marks):
+    sum=0
+    for marks in sub_marks.values():
+        if (type(marks)==str):
+            return("scores can be in integers ONLY")  
+        elif(marks>100):
+            return(" max allowed score is 100 ONLY")    
+        sum=sum+marks    
+    if(sum==400):
+        return("A+")
+    elif(sum>=350 and sum<400):
+        return("A")
+    elif(sum>=300 and sum<350):
+        return("B+")
+    elif(sum>=200 and sum<250):
+        return("C")
+    elif(sum>=150 and sum<200):
+        return("E")
+    elif(sum<150):
+        return("F")    
+result=check_grade(maths=100,physics=100,chemistry=100,cse=100)
+print(result)  
