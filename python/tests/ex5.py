@@ -11,11 +11,11 @@
        Total       Grade
        ------      ------
         400         A+
-        350-400         A
+        350-400     A
         300-350     B+
         250-300     B
         200-250     C
-        150-200       E
+        150-200     E
         <150        F
 '''
 def check_grade(**sub_marks):
@@ -36,7 +36,7 @@ def check_grade(**sub_marks):
         return("C")
     elif(sum>=150 and sum<200):
         return("E")
-    elif(sum<150):
-        return("F")    
-result=check_grade(maths=100,physics=100,chemistry=100,cse=100)
+    else:
+      return("F")
+result=check_grade(maths=10,physics=10,chemistry=10,cse=10)
 print(result)  
