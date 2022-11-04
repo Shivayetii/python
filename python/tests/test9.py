@@ -47,7 +47,8 @@ def func_exec(**ratings):
 				Expected Output : Raise Exception since rating score is a string "100", rating scores can be integers ONLY
 
     Definition of keywargs:
-    
+    when ever we don't know how many key value pairs  passed to the function this keywargs are collected the all
+    key-value pairs while calling the function  that is called as **keywargs
 
 	:params
 	--------
