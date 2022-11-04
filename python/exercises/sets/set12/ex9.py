@@ -7,7 +7,6 @@ def func_exec(**ratings):
 		   	4. Formula for new salary calculation:
 		   		new_salary= ((hike/100)*old_salary)+old_salary
 		   		Example:
-		   		---------
 		   			curr_salary=100000
 		   			hike=30
 		   			new_salary=((30/100)*100000)+100000
@@ -17,11 +16,7 @@ def func_exec(**ratings):
 		   			hike=10
 		   			new_salary=((10/100)*50000)+50000
 		   			new_salary=55000
-
-		   ----------------------------------------------------------------------------------------------------------------
-
 		   Here's the table to calculcate the hike
-
 			   Total       Hike%
 			   ------      ------
 			    100         30
@@ -31,7 +26,6 @@ def func_exec(**ratings):
 			    60-70       8
 			    50-60       4
 			    <50         1
-
 			Example :
 				result=func_exec(rating=100,curr_salary=100000)
 				print(result)
@@ -52,18 +46,20 @@ def func_exec(**ratings):
 				print(result)
 				Expected Output : Raise Exception since rating score is a string "100", rating scores can be integers ONLY
 
+    Definition of keywargs:
+	when ever we don't know how many key value pairs  passed to the function this keywargs are collected the all
+    key-value pairs while calling the function  that is called as **keywargs
+    
 	:params
 	--------
-
 	:param rating: Rating for the given Employee
 	:param curr_salary: Current Salary of the Employee
 
 	:return:
-	--------
-		
+	--------	
 		Given the rating, find the hike and new salary and return		
 		Expected Output : {"hike":"30","new_salary":"130000"}
-
+        
 	:exceptions:
 	------------
 
