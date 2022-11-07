@@ -56,7 +56,7 @@ SECTION 5:
 
         2. CREATE/DELETE/UPDATE Indexes
 
-        3. kubectl commands for kibana
+        3. kubectl commands for logstash
 
 SECTION 6:
 ---------
