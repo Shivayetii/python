@@ -26,7 +26,7 @@ SECTION 2:
 SECTION 3:
 ---------
 
-    # Deploying kibana using Kubernetes
+    # Deploying logstash using Kubernetes
 
         1. Deployment Spec
 
@@ -52,7 +52,7 @@ SECTION 5:
 
     # Verification post installation
 
-        1. Access kibana in UI
+        1. Access logstash in UI
 
         2. CREATE/DELETE/UPDATE Indexes
 
@@ -61,7 +61,7 @@ SECTION 5:
 SECTION 6:
 ---------
 
-    # kibana UI Access
+    # logstash UI Access
 
         1. UI Link
 
