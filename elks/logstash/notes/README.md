@@ -33,7 +33,7 @@ SECTION 2:
 
            * In our case we  need logstash image for that by we need to pull the image from docker-hub
 
-           * If we want to deployee our image in our custom-network first we need to create network we can also
+           * If we want to deploy our image in our custom-network first we need to create network we can also
              
              deployee our image in default network for that no need to create any network by using normal commands
 
@@ -51,7 +51,7 @@ SECTION 2:
 
                 IP:container-port-number
 
-           * By using below command we can create or custom net-work 
+              * By using below command we can create or custom net-work 
              
              docker network create <Network_Name>
 
