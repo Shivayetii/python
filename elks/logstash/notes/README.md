@@ -53,7 +53,7 @@ SECTION 2:
 
               * By using below command we can create or custom net-work 
              
-             docker network create <Network_Name>
+                docker network create <Network_Name>
 
         2. Create Docker Container and run that container in custom network
         
