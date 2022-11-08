@@ -68,7 +68,7 @@ SECTION 3:
 
     # Deploying logstash using Kubernetes
 
-      * when ever we want to deploy  any pod in kubernetes we have to create namesapce we can deployee pods
+      * when ever we want to deploy  any pod in kubernetes we have to create namesapce we can deploy pods
         
         deafult namesoace also in our case our logstash pod is deployee in specific name-sapce, so we are create
 
