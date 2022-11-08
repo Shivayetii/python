@@ -70,7 +70,7 @@ SECTION 3:
 
       * when ever we want to deploy  any pod in kubernetes we have to create namesapce we can deploy pods
         
-        deafult namesoace also in our case our logstash pod is deployee in specific name-sapce, so we are create
+        deafult namesoace also in our case our logstash pod is deploy in specific name-sapce, so we are create
 
         name-sapce
 
@@ -87,6 +87,32 @@ SECTION 3:
            * By using below command to deploy logstash specified namespace
 
               kubectl apply -f deployment.yml -n <Namespace-Name>
+        
+        Sample deployement yml file for logstash
+        ****************************************
+        apiVersion: apps/v1
+        kind: Deployment
+        metadata:
+        name: logstash
+        namespace: elkapis
+        labels:
+            component: logstash
+        spec:
+        strategy:
+            type: Recreate
+        selector:
+            matchLabels:
+            component: logstash
+        template:
+            metadata:
+            labels:
+                component: logstash
+            spec:
+            containers:
+                - name: logstash
+                image: logstash:8.5.0
+                ports:
+                    - containerPort: 5044
 
         2. Service Spec
 
@@ -99,6 +125,26 @@ SECTION 3:
               kubectl apply -f service.yml -n <Namespace-Name>
 
               * logstash UI Access using localhost:Nodeport or VM_IP:Nodeport
+
+        Sample service yml file for logstash
+        ************************************
+        apiVersion: v1
+        kind: Service
+        metadata:
+        namespace: elkapis
+        name: logstashsvc
+        labels:
+            component: logstash
+        spec:
+        externalIPs:
+        - 10.74.190.101
+        type: NodePort
+        ports:
+        - port: 5044
+            protocol: TCP
+            targetPort: db
+        selector:
+            component: logstash
 
         3. kubectl commands for debug
 
