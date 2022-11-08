@@ -182,9 +182,17 @@ SECTION 5:
 
         1. Access logstash in UI
 
+           we can access logstash in two ways
+
+             * By using VMIP:ContainerPortNo
+
+             * By using VMIP:NodePortNo
+
         2. CREATE/DELETE/UPDATE Indexes
 
         3. kubectl commands for logstash
+
+           
 
 SECTION 6:
 ---------
