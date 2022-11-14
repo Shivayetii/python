@@ -188,9 +188,20 @@ SECTION 5:
 
              * By using VMIP:NodePortNo
 
-        2. CREATE/DELETE/UPDATE Indexes
+        2. kubectl commands for logstash
 
-        3. kubectl commands for logstash
+           * By using below command we can get pod is available or not in specified namespace
+
+             kubectl get pod <pod-name> -n <namespace-name>
+
+          *  By using below command we can get service is available or not in specified namespace
+
+             kubectl get svc <svc-name> -n <namespace-name>  
+           
+
+          * By using below command we can get deployment is available or not in specified namespace
+
+             kubectl get deployment <deployment-name> -n <namespace-name>  
 
            
 
@@ -199,14 +210,10 @@ SECTION 6:
 
     # logstash UI Access
 
-        1. UI Link
+        1.  http://10.74.190.101:5000
+
 
 SECTION 7:
----------
-
-    # REST API Commands for all CRUD
-
-SECTION 8:
 ---------
     # References
     
