@@ -1,22 +1,113 @@
 SECTION 1:
 ---------
 
-    # What's MongoDB and why we use it
+    1. What's MongoDB and why we use it
 
-     MongoDB is an open-source document-oriented database that is designed to store a large scale of data and also allows you to work with that data very efficiently that is called as MongoDB
+        MongoDB is an open-source document-oriented database.
+        that is designed to store a large scale of data.
+        and also allows you to work with that data very efficiently that is called as MongoDB
 
-    why use MongoDB
-    . MongoDB is a open source tool no needs to pay any money to anyone
-    . MongoDB makes use of collections and documents.
-    . Inside of the collection we have documents. 
-    . These documents contain the data we want to store in the MongoDB database.
-    . Documents consist of key-value pairs which are the basic unit of data in MongoDB.
-    . The data stored in the MongoDB is in the format of BSON documents. 
-    . BSON stands for Binary representation of JSON documents.
-    . High availability
-    . Horizontal scaling
-    . Built-in security
+    2. why use MongoDB
+        * MongoDB is a open source tool no needs to pay any money to anyone
+        * MongoDB makes use of collections and documents.
+        * Inside of the collection we have documents. 
+        * These documents contain the data we want to store in the MongoDB database.
+        * Documents consist of key-value pairs which are the basic unit of data in MongoDB.
+        * The data stored in the MongoDB is in the format of BSON documents. 
+        * BSON stands for Binary representation of JSON documents.
+        * High availability
+        * Horizontal scaling
+        * Built-in security
     
+    3. What's mongo-shell?
+
+        MongoDB Mongo shell is an interactive JavaScript interface.
+        that allows you to interact with MongoDB instances through the command line. 
+        that is called as the mongoDB shell
+
+    4. why use MongoDB shell(benifits of MongoDB shell)
+      
+        * We can run all MongoDB queries from the Mongo shell.
+        * We can Manipulate data and perform administration operations.
+        * Mongo shell uses JavaScript and a related API to issue commands.
+        * We can see previous commands in the mongo shell with up and down arrow keys.
+        * We can View possible command completions using the tab button after partially entering a command.
+        * It will print error messages, so you know what went wrong with your commands.
+    
+    5. Install MongoDB Community Edition on Ubuntu 
+
+       * We need to follow below these steps to install MongoDB Community Edition using the apt package manager.
+       
+         * First we need to Import the public key it is used by the package management system, the command is
+
+                wget -qO - https://www.mongodb.org/static/pgp/server-6.0.asc | sudo apt-key add -
+
+                Note: the above the command is correct it will show output is OK
+
+         * However, if you receive an error  indication in system we don't have gnupg package
+           by using below command we can install gnupg
+
+                sudo apt-get install gnupg
+
+        * Once gnupg installation is done we can retry to install importing the key
+
+                wget -qO - https://www.mongodb.org/static/pgp/server-6.0.asc | sudo apt-key add -
+       
+        * After import key installation is done if we are run below this command it will shows the
+          mongoDB shell which version is running on or system
+
+               lsb_release -dc.
+
+        * We need to create a list file for MongoDB for that we can run below command
+         
+               echo "deb [ arch=amd64,arm64 ] https://repo.mongodb.org/apt/ubuntu bionic/mongodb-org/6.0 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-6.0.list
+
+        * We need to updated the ubuntu system for that we can run below command
+
+               sudo apt-get update
+        * To install the latest stable version of MongoDb for that we can run below command
+               sudo apt-get install -y mongodb-org
+
+        * To start the MongoDB shell for that we can below commands one by one
+
+               1. sudo systemctl daemon-reload
+
+               2. sudo systemctl start mongod
+
+        * We can Verify that MongoDB has shell started or not for that we can run below command
+
+               sudo systemctl status mongod
+
+        * If we want to enable mongoDB you can use below command
+
+               sudo systemctl enable mongod
+
+        * If we want to stop mongoDB shell we can use below command
+            
+               sudo systemctl stop mongod
+    
+        * If we want to restart mongoDB shell we can use below command
+
+              sudo systemctl restart mongod
+        
+        * If we want uninstall mongoDB we can use below command one by one
+
+              1. sudo service mongod stop
+
+              2. sudo apt-get purge mongodb-org*
+
+        * If we want to remove mongodb database library files and log files we can use below commands one by one
+
+              1. sudo rm -r /var/log/mongodb
+              2. sudo rm -r /var/lib/mongodb
+
+            1. LOGIN TO MONGO-SHELL
+
+              * After installation of MongoDB shell in linux by using below command we can log in Mongo shell
+
+                  mongo
+          
+               
 SECTION 2:
 ---------
 
@@ -445,6 +536,8 @@ SECTION 7:
 SECTION 8:
 ---------
     # References
+
+    https://www.mongodb.com/docs/manual/tutorial/install-mongodb-on-ubuntu/#verify-that-mongodb-has-started-successfully
     
     https://hevodata.com/learn/mongodb-docker/
 
