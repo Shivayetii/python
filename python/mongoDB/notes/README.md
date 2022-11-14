@@ -176,7 +176,7 @@ SECTION 2:
         
            docker run --name <containername> --net <Network_Name> -p 27017:27017 mongo
 
-          * logstash default port number is 17017
+          * logstash default port number is 27017
 
              We can access the logstash UI Access using localhost:27017 or VM_IP:27017
 
