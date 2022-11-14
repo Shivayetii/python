@@ -34,27 +34,27 @@ SECTION 1:
         * We can View possible command completions using the tab button after partially entering a command.
         * It will print error messages, so you know what went wrong with your commands.
     
-    5. Install MongoDB Community Edition on Ubuntu 
+    5. Install MongoDB Community Edition on Ubuntu.
 
        * We need to follow below these steps to install MongoDB Community Edition using the apt package manager.
        
-         * First we need to Import the public key it is used by the package management system, the command is
+         * First we need to Import the public key it is used by the package management system, the command is.
 
                 wget -qO - https://www.mongodb.org/static/pgp/server-6.0.asc | sudo apt-key add -
 
                 Note: the above the command is correct it will show output is OK
 
          * However, if you receive an error  indication in system we don't have gnupg package
-           by using below command we can install gnupg
+           by using below command we can install gnupg.
 
                 sudo apt-get install gnupg
 
-        * Once gnupg installation is done we can retry to install importing the key
+        * Once gnupg installation is done we can retry to install importing the key.
 
                 wget -qO - https://www.mongodb.org/static/pgp/server-6.0.asc | sudo apt-key add -
        
         * After import key installation is done if we are run below this command it will shows the
-          mongoDB shell which version is running on or system
+          mongoDB shell which version is running on or system.
 
                lsb_release -dc.
 
@@ -62,52 +62,226 @@ SECTION 1:
          
                echo "deb [ arch=amd64,arm64 ] https://repo.mongodb.org/apt/ubuntu bionic/mongodb-org/6.0 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-6.0.list
 
-        * We need to updated the ubuntu system for that we can run below command
+        * We need to updated the ubuntu system for that we can run below command.
 
                sudo apt-get update
-        * To install the latest stable version of MongoDb for that we can run below command
+
+        * To install the latest stable version of MongoDb for that we can run below command.
+
                sudo apt-get install -y mongodb-org
 
-        * To start the MongoDB shell for that we can below commands one by one
+        * To start the MongoDB shell for that we can below commands one by one.
 
                1. sudo systemctl daemon-reload
 
                2. sudo systemctl start mongod
 
-        * We can Verify that MongoDB has shell started or not for that we can run below command
+        * We can Verify that MongoDB has shell started or not for that we can run below command.
 
                sudo systemctl status mongod
 
-        * If we want to enable mongoDB you can use below command
+        * If we want to enable mongoDB you can use below command.
 
                sudo systemctl enable mongod
 
-        * If we want to stop mongoDB shell we can use below command
+        * If we want to stop mongoDB shell we can use below command.
             
                sudo systemctl stop mongod
     
-        * If we want to restart mongoDB shell we can use below command
+        * If we want to restart mongoDB shell we can use below command.
 
               sudo systemctl restart mongod
         
-        * If we want uninstall mongoDB we can use below command one by one
+        * If we want uninstall mongoDB we can use below command one by one.
 
               1. sudo service mongod stop
 
               2. sudo apt-get purge mongodb-org*
 
-        * If we want to remove mongodb database library files and log files we can use below commands one by one
+        * If we want to remove mongodb database library files and log files we can use below commands one by one.
 
               1. sudo rm -r /var/log/mongodb
               2. sudo rm -r /var/lib/mongodb
 
             1. LOGIN TO MONGO-SHELL
 
-              * After installation of MongoDB shell in linux by using below command we can log in Mongo shell
+              * After installation of MongoDB shell in linux by using below command we can log in Mongo shell.
 
-                  mongo
-          
-               
+                 VM Ipaddress:MongoDB default PortNo
+
+                 EX: 10.74.190.101:27017
+
+            2. RUN SAMPLE COMMANDS
+
+               1.  MongoDB Commands Listing (Common Line Options):
+
+                   There are no of options provided by MongoDB but in this sectio we use most common options of MongoDB when used in conjunction with the MongoDB shell startup, to work with MongoDB database server.
+
+                     * If we want to list all the available options that can be used while starting up 
+                       the MongoDB Shell we can use below command.
+
+                         --help
+
+                    * If we want to specifies to start the MongoDB shell connecting to any database
+                      we can use below command.
+
+                         --nodb
+
+                    * If we want to specifies to start the shell after running any specific *.js files earlier
+                      we can use below command.
+
+                         --shell
+
+                    * If we want to specifies the version information of the MongoDB shell during startup
+                      we can use below command.
+
+                         --version
+
+                    * If we want to starts the MongoDB shell with not many chatty messages we can use below command.
+
+                         --quiet
+
+                2. MongoDB Commands Listing (Command Helpers):
+
+                   There are various command helpers available for the MongoDB shell (mongo). we can use most commonly used help commands when ever we are using MongoDB shell.
+
+                    * If we want shows help related information on the MongoDB shell we can use below command.
+
+                         help
+
+                    * If we want to shows help related information on the database methods in  
+                      MongoDB shell we can use below command.
+
+                         db.help()
+
+                    * If we want to show in server the existing collection is available or not by using below 
+                      help command we can find.
+
+                         db..help
+
+                    * If we want to list all the databases available for use on the connected MongoDB instance
+
+                      we can use below command.
+
+                         show dbs
+                            or
+                         show databases
+
+                    * If we want to switch the specific database or create new database.
+                      in MongoDB shell we can use below command.
+
+                         use
+
+                    * If we want to list all the collections available for use on the current database
+                      we can use below command.
+
+                         show collections
+
+                    * If we want to list all the users available on the current database
+                      we can use below command.
+
+                         show users
+
+                    * If we want to lists all the roles (both built-in roles and user-defined roles)
+                      on the current database we can use below command.
+
+                         show roles
+
+                    * If we want to list the last 5 recent operations that took 1 millisecond or more
+                      we can use below command.
+
+                         show profile
+
+                    * If we want to executes a specified javascript file we can use below command.
+
+                         load()
+                  
+                  3. MongoDB Commands Listing (Administrative Command Helpers):
+
+                    This below commands help full to us, we can get  online on MongoDB and do some administrative tasks on MongoDB. This section specifically works upon the administrative tasks on databases created within the MongoDB database server. The most commonly used commands are provided in below.
+
+                   * If we want to clone current database in our MongoDB shell we can use below command.
+
+                         db.cloneDatabase()
+
+                   * If we want to copy one collection to another collection in MongoDB we can use below command.
+
+                       db.collection1.copyTo("collection2")
+
+                  * If we want to repaire database in MongoDB shell we can use below command.
+
+                     db.repairDatabase_Name()
+
+                  * If we want to  a list of collections available in the current database as a list 
+                     we can use below command.
+
+                       db.getCollectionNames()
+
+                  * If we want to drop current database in MongoDB shell we can use below command.
+
+                     db.dropDatabase_Name()
+
+              4. MongoDB Commands Listing (Basic Shell JS Operations):
+                
+                MongoDB provides a rich collection of Javascript API for database related operations. DB is the mongo shell variable that holds the current database. The variable is reset to when the command is used, until then it points to the test database.
+
+                Some of the commonly used commands for  Javascript operations.
+
+                  * If we want to authenticates the user and if the MongoDB shell is running in a secure mode
+                    we can use below command.
+
+                     db.auth()
+
+                  * If we want to Assign a specific collection ‘myCollection’ 
+                    to the variable ‘myCollectionVariable’, as shown in the example below:
+
+                       myCollectionVariable = db.myCollection;
+
+                  * If we want to finds all the documents in a specific collection we can use below command.
+
+                     db.collection.find()
+
+                     EX: db.myCollection.find()
+
+                  * If we want to insert one document into the specific collection we can use below command.
+
+                     db.collection.insertOne()
+
+                  * If we want to insert multiple document into the specific collection we can use below command.
+
+                     db.collection.insertMany()
+
+                  * If we want to Updates one single document in the specified collection we can use below command.
+
+                     db.collection.updateOne()
+
+                  * If we want to Updates multiple documents in the specified collection we can use below command.
+
+                     db.collection.updateMany()	
+
+                  * If we want to Inserts a new document into the collection if it doesn’t exists, 
+                    and if it exists  updates the document in the collection we can use below command.
+
+                     db.collection.save()
+
+                  * If we want to deletes one document from the collection we can use below command.
+
+                     db.collection.deleteOne()
+
+                  * If we want to deletes multiple document from the collection we can use below command.
+
+                     db.collection.deleteMany()
+
+                  * If we want to drop or remove the collection entirely from the database we can use below command.
+
+                     db.collection.drop()
+
+                  * If we want to creates a new index on the collection specified via the command, 
+                    if it doesn’t  exist. If the index already exists, then there is no effect of this command over the collection specified by the command.
+
+                     db.collection.createIndex()
+
+                        
 SECTION 2:
 ---------
 
@@ -115,7 +289,7 @@ SECTION 2:
 
         1. Docker Image name
         
-        * If we want to deploy MongoDB in our system or VM we need to follow below steps and commands
+        * If we want to deploy MongoDB in our system or VM we need to follow below steps and commands.
            
            * First We have to Docker installed in your system. If not done already
               you can download it from the Official Docker website.
@@ -125,40 +299,40 @@ SECTION 2:
              
               service docker status
 
-           * Second one is  docker-hub account or docker-hub authentication credentials
+           * Second one is  docker-hub account or docker-hub authentication credentials.
 
-           * In docker-hub registry available the latest official images
+           * In docker-hub registry available the latest official images.
 
-           * In our case we  need to deploy MongoDB image for that by we need to pull the image from docker-hub
+           * In our case we  need to deploy MongoDB image for that by we need to pull the image from docker-hub.
 
-           * If we want to deploy our image in our custom-network first we need to create network we can also
+           * If we want to deploy our image in our custom-network first we need to create network we can also.
              
              deploy our image in default network for that no need to create any network by using normal commands
 
-             we can access appliction
+             we can access appliction.
 
               * first step is pull image
 
-                * If we want to downlod latest MongoDB docker image in our VM we can use below command
+                * If we want to downlod latest MongoDB docker image in our VM we can use below command.
 
                   docker pull mongo
 
-                * If we want to downlod specific MongoDB docker image in our VM we can use below command
+                * If we want to downlod specific MongoDB docker image in our VM we can use below command.
 
                   docker pull mongo:4.2.2
 
                * If we want to check the Docker images download in your system or not 
-                 you can run the below  command
+                 you can run the below  command.
 
                   docker images
 
-            * second step is create container and run that container
+            * second step is create container and run that container.
             
-               * If we want to run our container in detach mode (Background process) we can run below this command
+               * If we want to run our container in detach mode (Background process) we can run below this command.
 
                  docker run --name mongodb -d mongo
 
-               *  If we want to access that application in broswer you can run below this command  
+               *  If we want to access that application in broswer you can run below this command. 
 
                  docker run --name mongodb -d -p 27017:27017 mongo           
 
@@ -166,42 +340,42 @@ SECTION 2:
 
                 IP:container-port-number
 
-            * If we want to deploy our MongoDB is our custom network firt we need to create custom network
+            * If we want to deploy our MongoDB is our custom network firt we need to create custom network.
 
-              * By using below command we can create or custom net-work 
+              * By using below command we can create or custom net-work.
              
                 docker network create <Network_Name>
 
-        2. Create Docker Container and run that container in custom network
+        2. Create Docker Container and run that container in custom network.
         
            docker run --name <containername> --net <Network_Name> -p 27017:27017 mongo
 
-          * logstash default port number is 27017
+          * MongoDB default port number is 27017.
 
-             We can access the logstash UI Access using localhost:27017 or VM_IP:27017
+             We can access the MongoDB UI Access using localhost:27017 or VM_IP:27017
 
 SECTION 3:
 ---------
 
     # Deploying MongoDBusing Kubernetes
 
-      * when ever we want to deploy  any pod in kubernetes we have to create namesapce we can deploy pods
+      * when ever we want to deploy  any pod in kubernetes we have to create namesapce we can deploy pods.
         
         deafult namesoace also in our case our logstash pod is deploy in specific name-sapce, so we are create
 
-        name-sapce
+        name-sapce.
 
-        * By using below command we can create specific namespace
+        * By using below command we can create specific namespace.
          
           kubectl create namespace <namespace_name>
 
         1. Deployment Spec
 
-           * By using below we can create Deployment yml file for MongoDB
+           * By using below we can create Deployment yml file for MongoDB.
 
               vi deployment.yml
 
-           * By using below command to deploy MongoDB specified namespace
+           * By using below command to deploy MongoDB specified namespace.
 
               kubectl apply -f deployment.yml -n <Namespace-Name>
         
@@ -250,11 +424,11 @@ SECTION 3:
 
         2. Service Spec
 
-           * By using below we can create service yml file for MongoDB
+           * By using below we can create service yml file for MongoDB.
 
               vi service.yml
 
-           * By using below command to deploy MongoDB specified namespace
+           * By using below command to deploy MongoDB specified namespace.
 
               kubectl apply -f service.yml -n <Namespace-Name>
 
@@ -278,19 +452,19 @@ SECTION 3:
   
         3. kubectl commands for debug
 
-           * By using below command we can describe the pod in specified namespace
+           * By using below command we can describe the pod in specified namespace.
 
               kubectl describe  pod <pod-name> -n <namespace-name>
 
-           * By using below command we can edit the pod in specified namespace
+           * By using below command we can edit the pod in specified namespace.
 
               kubectl edit  pod <pod-name> -n <namespace-name>
 
-          *  By using below command we can describe the service in specified namespac
+          *  By using below command we can describe the service in specified namespac.
 
               kubectl describe  svc <svc-name> -n <namespace-name>  
 
-          *  By using below command we can edit the service in specified namespac
+          *  By using below command we can edit the service in specified namespac.
 
               kubectl edit  svc <svc-name> -n <namespace-name>   
 
@@ -532,6 +706,42 @@ SECTION 6:
 
 SECTION 7:
 ---------
+
+      # REST API Commands for all CRUD
+
+         *  Create an Index in MongoDB by using below command we can created.
+
+            curl -v -XPOST -H "Content-Type: application/json" http://10.74.190.101:27017/student_data"
+
+         * If we want to  verify Index created or not by using below command we can check.
+
+            curl -v -XGET "http://10.74.190.101:27017/student_data/id"
+
+         * If we want to insert our date into our index by using below command we can insert.
+
+            curl -v -XPUT -H "Content-Type: application/json" http://10.74.190.101:27017/student_data/ -d"
+            {
+            "Student_name": "ramesh",
+            "subects": "Maths","physics",
+            "Age": 14,
+            "Gender": "male",
+            "Address": "vijayawada"
+            }'
+
+         * If we want to update in to our index by we can use below command.
+
+           curl -v -XPUT -H "Content-Type: application/json" http://localhost:5000/student_data/ -d"
+           {
+            "Student_name": "ramesh",
+            "subects": "Maths","physics",
+            "Age": 14,
+            "Gender": "male",
+            "Address": "vijayawada"
+            }'
+
+        * If we want to delete exiting entery in our index we can use below command.
+
+          curl -v -XDELETE "http://10.74.190.101:27017/student_data"
     
 SECTION 8:
 ---------
@@ -541,7 +751,11 @@ SECTION 8:
     
     https://hevodata.com/learn/mongodb-docker/
 
+    https://mindmajix.com/mongodb-commands
+
     https://hevodata.com/learn/mongodb-crud-operations-in-python/
+
+    https://github.com/tien-han/REST-API-with-MongoDB
 
     https://towardsdatascience.com/build-a-rest-api-with-node-express-and-mongodb-937ff95f23a5
 
