@@ -3,7 +3,8 @@ SECTION 1:
 
     1. What is Grafana ?
 
-        Grafana is an open source interactive data-visualization platform or tool,  it is developed by Grafana Labs, which allows users to see their data via charts and graphs that are unified into one dashboard (or multiple dashboards!) for easier to users understanding.
+        Grafana is an open source interactive data-visualization platform or tool.
+        it is developed by Grafana Labs, which allows users to see their data via charts and graphs that are unified into one dashboard (or multiple dashboards!) for easier to users understanding.
 
     2. why use Grafana ?
 
