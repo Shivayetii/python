@@ -30,8 +30,7 @@ SECTION 1:
 SECTION 2:
 ---------
 
-    # Deploying Grafana using Dockers
-
+    # 
         1. Docker Image name  
 
            * If we want to deploy  Grafana in our system or VM we need to follow below steps and commands.
@@ -206,12 +205,12 @@ SECTION 4:
 
         1. HELM Charts
 
-                1. What is HELM Charts?
+                1. What is HELM package manager?
 
                     We knows about the Linux APT package manager here also HELM works similar to APT  package manager So HELM is package manager tool. By using HELM we can download charts is easily.
                     HELM contains  pre-packaged collections of all the necessary versioned and pre-configured resources required to deploy a container.
 
-                2. Why we use HELM Charts?
+                2. Why we use HELM package manager?
 
                    * By using HELM we can  improved productivity.
                    * BY using HELM we can reduced complexity of deployments.
@@ -271,7 +270,7 @@ SECTION 4:
 
                                 kubectl edit svc stable-grafana
 
-                2. Access Prometheus and Grafana WEB Interface
+        4. Access Prometheus and Grafana WEB Interface
 
                         * Run below this command we are able to access the prometheus services.
 
