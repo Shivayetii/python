@@ -1,7 +1,7 @@
 SECTION 1:
 ---------
 
-    1. What's MongoDB and why we use it
+    1. What's MongoDB ?
 
         MongoDB is an open-source document-oriented database.
         that is designed to store a large scale of data.
