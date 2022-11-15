@@ -1,14 +1,18 @@
 SECTION 1:
 ---------
 
-    1. What is Grafana ?
+    1. Aim
+
+       To monitoring the kubernetes deployments and infra by using Grafana
+
+    2. What is Grafana ?
 
         Grafana is an open source interactive data-visualization platform or tool.
         it is developed by Grafana Labs, which allows users to see their,
         data via charts and graphs that are unified into one dashboard (or multiple dashboards!) 
         for easier to users understanding.
 
-    2. why use Grafana ?
+    3. why use Grafana ?
 
         1.Grafana is free open sources tool no need to pay any amount of any one
 
@@ -22,31 +26,6 @@ SECTION 1:
         5.Grafana will manage system reports ,metrics, logs and alerts.
     
         6.Grafana Integrates with set of data sources, like Prometheus,MySQL, Elasticsearch and Splunk.
-
-    3. What's Grafana dashboard?
-
-       A Grafana dashboard supports multiple panels in a single grid. You can visualize results from multiple data sources simultaneously.
-
-    4. How to create dashboard in Grafana?
-
-       1. After installation of Grafana it will show Grafana welcome page.
-
-       2. On top of Grafana page on left side we can see (+) plus option so first we need click on plus option
-
-       3. And then it will show dashboard option so second step is click on dashboard option
-
-       4. It will display add new panel so third step is click on add new panel
-
-       5. It will display visualization under visualization we can see multiple options like charts, graphs etc
-
-          We can select our requirement which options we need. if data is not it will display no data on screen
-
-       6. We are able to add data in grafana for we can do below like that
-
-       7. First click on settings and it will display datasources so we need to click on datasources 
-       
-       8. And second step is add data source here available different types of databases we can select what data
-          source we need to add.
 
 SECTION 2:
 ---------
@@ -335,9 +314,85 @@ SECTION 6:
     # Grafana UI Access
 
         1.  http://10.74.190.101:3000
+        
+        2.  What's Grafana dashboard?
 
+             A Grafana dashboard supports multiple panels in a single grid. 
+             You can visualize results from multiple data sources simultaneously.
+
+        3.  How to create dashboard  manually in Grafana?
+
+                  * After installation of Grafana it will show Grafana welcome page.
+
+                  * On top of Grafana page on left side we can see (+) plus option so first we need click on plus option
+
+                  * And then it will show dashboard option so second step is click on dashboard option
+
+                  * It will display add new panel so third step is click on add new panel
+
+                  * It will display visualization under visualization we can see multiple 
+                    options like charts,  graphs etc
+                    We can select our requirement which options we need. if data is not it will display no data on screen
+
+                  * We are able to add data in grafana for we can do below like that
+
+                  * First click on settings and it will display datasources so we need to click on datasources 
+                
+                  * And second step is add data source here available 
+                    different types of databases we can select what datasource we need to add.
 
 SECTION 7:
+---------
+
+       # REST APIs to interact with Grafana
+
+              1. Create Dashboard
+
+                    * By using below command we are able to create new dashboard in Grafana.
+
+                      curl -X POST --insecure -H "Authorization: Bearer eyJrIjoiR0ZXZmt1UFc0OEpIOGN5RWdUalBJTllUTk83VlhtVGwiLCJuIjoiYXBpa2V5Y3VybCIsImlkIjo2fQ==" -H "Content-Type: application/json" -d '{
+                         "dashboard": {
+                           "id": null,
+                           "title": "Production Overview",
+                           "tags": [ "templated" ],
+                           "timezone": "browser",
+                           "rows": [
+                             {
+                             }
+                           ],
+                           "schemaVersion": 6,
+                           "version": 0
+                         },
+                         "overwrite": false
+                      }' http://localhost:3000/api/dashboards/db
+                        
+              2. Updated Dashboards
+
+                    * By using below command we are able to update existing dashboards in Grafana.
+
+                         curl -X POST --insecure -H "Authorization: Bearer eyJrIjoiR0ZXZmt1UFc0OEpIOGN5RWdUalBJTllUTk83VlhtVGwiLCJuIjoiYXBpa2V5Y3VybCIsImlkIjo2fQ==" -H "Content-Type: application/json" -d '{
+                         "dashboard": {
+                           "id": null,
+                           "title": "Non production Overview",
+                           "tags": [ "templated" ],
+                           "timezone": "browser",
+                           "rows": [
+                             {
+                             }
+                           ],
+                           "schemaVersion": 6,
+                           "version": 0
+                         },
+                         "overwrite": false
+                      }' http://localhost:3000/api/dashboards/db
+
+              3. Delete Dashboard
+
+                    * By using below command we are able to delete existing dashboards in Grafana.
+
+                     curl -X DELETE --insecure -H "Authorization: Bearer eyJrIjoiR0ZXZmt1UFc0OEpIOGN5RWdUalBJTllUTk83VlhtVGwiLCJuIjoiYXBpa2V5Y3VybCIsImlkIjo2fQ==" -H "Content-Type: application/json" -d '
+
+SECTION 8:
 ---------
     # References
     
