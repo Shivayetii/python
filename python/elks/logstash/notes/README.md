@@ -1,22 +1,23 @@
 SECTION 1:
 ---------
 
-    # What's logstash and why we use it
+    # What is logstash?
 
-    Logstash is pipeline tool logstash is accept inputs and logs from various sources and
-    similarly exports data from exact tragets that is called as logstash.
+        Logstash is pipeline tool logstash is accept inputs and logs from various sources and
+        similarly exports data from exact tragets that is called as logstash.
 
-    why use log-stash
-    1.logstash is free open sources no need to pay any amount of any one
-    2.logstash is eaisly collect the data form multiple sources
-    3.logstash send the data to desired destination
-    4.The Logstash have Java Database Connectivity (JDBC) input plugin enables you to pull in data from many popular relational databases including MySQL and Postgres
-    5.Logstash collect data from all shapes and size of data
-      Eg: syslogs, datastore like NoSQL/RDBMS, web-like,Twitter or Github
-    6.Logstash will transform the data and store it into different storage for analytical.
-      Eg: For analysis, we can use datastore like MongoDB or elasticsearch.
-          For archiving we can store data in the s3/Google storage.
-          For monitoring, we can use Nagios/Graphite
+    # Why we use log-stash
+
+        1.logstash is free open sources no need to pay any amount of any one
+        2.logstash is eaisly collect the data form multiple sources
+        3.logstash send the data to desired destination
+        4.The Logstash have Java Database Connectivity (JDBC) input plugin enables you to pull in data from many popular relational databases including MySQL and Postgres
+        5.Logstash collect data from all shapes and size of data
+        Eg: syslogs, datastore like NoSQL/RDBMS, web-like,Twitter or Github
+        6.Logstash will transform the data and store it into different storage for analytical.
+        Eg: For analysis, we can use datastore like MongoDB or elasticsearch.
+            For archiving we can store data in the s3/Google storage.
+            For monitoring, we can use Nagios/Graphite
 
 SECTION 2:
 ---------
@@ -212,11 +213,91 @@ SECTION 6:
 
         1.  http://10.74.190.101:5000
 
-
 SECTION 7:
+
+    # REST API Commands for logstash
+
+         When we run logstash it is automatically display the runtime metrics that can be used to
+         monitor the health and performance of our logstash deployment.
+           
+            * The metrics are collected logstash information,OS information and JVM information
+
+                 Ex: pipeline settings
+
+            * The metrics collected plugin information and also list of installed plugins.
+
+            * Logstash APIs check the Node stats, JVM stats, process stats, event-related stats, 
+              and pipeline runtime stats.
+
+            * we can use monitoring APIs provided by Logstash to collect above the metrics. 
+              These APIs are available by default without requiring any extra configuration.
+
+            * Alternatively, we can configure X-Pack monitoring to send data to a monitoring cluster.
+
+            * If we want to see general information about the Logstash instance, including the host and version.
+              we can use below command.
+            
+                    curl -XGET '10.74.190.101:5000/?pretty'
+
+            * If we want to see what all are plugins  runing our system we can use below command.
+
+                    curl -XGET '10.74.190.101:5000/_node/plugins?pretty'
+
+            * If we want to see node stats it will display the runtime node stats for 
+              that we can use below command.
+
+                    curl -XGET '10.74.190.101:5000/_node/stats/<types>'
+
+            * If we want to see G JVM stats, including stats about threads, 
+              memory usage, garbage collectors, and uptime. we can use below command.
+
+                       curl -XGET 'localhost:5000/_node/stats/jvm?pretty'
+
+            * If we want to see process stats, including stats about file descriptors, 
+              memory consumption, and CPU usage we can use below command.
+
+                       curl -XGET '10.74.190.101:5000/_node/stats/process?pretty'
+
+            * If we want to see event-related statistics for the Logstash instance 
+              of how many pipelines were created and destroyed we can use below command.
+
+                       curl -XGET '10.74.190.101:5000/_node/stats/events?pretty'
+
+            * If we want to see  flow-related statistics for the Logstash instance
+              of how many pipelines were created and destroyed we can use below command.
+
+                       curl -XGET '10.74.190.101:5000/_node/stats/flow?pretty'
+
+            * If we want to see runtime stats about each Logstash pipeline for that we can use below command.
+
+                       curl -XGET '10.74.190.101:5000/_node/stats/pipelines?pretty'
+
+            * If we want to see runtime stats about cgroups when Logstash is running in a container.
+              we can use below command.
+
+                       curl -XGET 'localhost:5000/_node/stats/os?pretty'
+
+            * If we want to see information about config reload successes or  failures for 
+              that we can use below command.
+
+                       curl -XGET '10.74.190.101:5000/_node/stats/reloads?pretty'
+
+            * If we want to see current hot threads for Logstash, A hot thread is a Java thread 
+              that has high CPU usage and executes for a longer than normal period of time.
+              for that we can use below command.
+
+                        curl -XGET 'localhost:9600/_node/hot_threads?pretty'
+
+SECTION 8:
 ---------
     # References
     
+    https://www.elastic.co/guide/en/logstash/current/introduction.html
+
     https://hub.docker.com/_/logstash
 
+    https://gitlab.com/ndevox/kubernetes-elastic-logging/blob/master/logstash-deployment.yaml
+
     https://sysadminxpert.com/elk-stack-architecture-elasticsearch-logstash-and-kibana/
+
+    https://www.elastic.co/guide/en/logstash/current/node-stats-api.html
