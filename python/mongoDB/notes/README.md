@@ -315,11 +315,11 @@ SECTION 2:
 
                 * If we want to downlod latest MongoDB docker image in our VM we can use below command.
 
-                  docker pull mongo
+                  sudo docker pull mongo:latest
 
                 * If we want to downlod specific MongoDB docker image in our VM we can use below command.
 
-                  docker pull mongo:4.2.2
+                  sudo docker pull mongo:4.2.2
 
                * If we want to check the Docker images download in your system or not 
                  you can run the below  command.
@@ -334,7 +334,7 @@ SECTION 2:
 
                *  If we want to access that application in broswer you can run below this command. 
 
-                 docker run --name mongodb -d -p 27017:27017 mongo           
+                  sudo docker run --name mongodb -d -p 27017:27017 mongo:latest           
 
               * access the application by using IPaddress and container-port-number
 

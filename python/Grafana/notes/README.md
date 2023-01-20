@@ -274,7 +274,7 @@ SECTION 4:
 
                         * Run below this command we are able to access the prometheus services.
 
-                               141:31370LocalhostIP:prometheusNodePortNo EX: 10.208.44
+                               LocalhostIP:prometheusNodePortNo EX: 10.208.141:31370
 
                         * Run below this command we are able to access the grafana services.
 
